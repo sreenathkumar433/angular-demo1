@@ -1,0 +1,39 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }} {{name}}!
+  </h1>
+  
+</div>
+<h2>Here are some links to help you start: </h2>
+<ul>
+  <li *ngFor='let person of persons' class="list-group-item"> 
+    {{person.name}}
+    {{person.gender}}
+    {{person.profession}}
+    <var></var>
+  </li>
+</ul>
+<table border="1">
+  <th>Name</th>
+  <th>Gender</th>
+  <th>Profession</th>
+  <tr *ngFor='let person of persons' class="list-group-item">
+    <td>{{person.name}}</td>
+    <td>{{person.gender}}</td>
+    <td>{{person.profession}}</td>
+  </tr>
+</table>
+<br/>
+<br/>
+  <input #cnt />
+  <button (click)="addClient(cnt.value)">Add</button>
+  <ul>
+  <li *ngFor="let ct of client" (click)="onclick(ct)">
+  <h5>{{ct}}</h5>
+  </ul>
+
+
+<router-outlet></router-outlet>
+
+
